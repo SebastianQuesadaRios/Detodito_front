@@ -1,106 +1,100 @@
 .reclamar-container {
-    max-width: 400px;
-    margin: auto;
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: 20px auto; /* Margen para centrar el contenedor */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
-    background: #ffffff; /* Fondo blanco para mayor claridad */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente oscuro */
+    color: white;
+    text-align: center; /* Centrado del texto */
 }
 
 .reclamar-title {
-    text-align: center;
-    color: #333;
-    font-size: 1.5em; /* Aumentar el tamaño de la fuente */
-    margin-bottom: 20px; /* Separar del formulario */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
 }
 
 .form-group {
     margin-bottom: 15px;
+    text-align: left;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 5px;
     font-weight: bold;
-    color: #555; /* Color más suave para la etiqueta */
+    color: #bbb;
+    margin-bottom: 5px;
 }
 
 .form-group input {
     width: 100%;
-    padding: 12px; /* Mayor padding para comodidad */
-    border: 1px solid #ccc;
+    padding: 10px;
+    border: 1px solid #f0a500; /* Bordes en el color de acento */
     border-radius: 4px;
-    transition: border-color 0.3s ease; /* Transición en el borde */
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
 }
 
-.form-group input:focus {
-    border-color: #28a745; /* Color de borde al enfocar */
-    outline: none; /* Eliminar el outline por defecto */
-}
-
+/* Estilos para el botón de reclamar */
 .reclamar-button {
     width: 100%;
-    padding: 12px; /* Mayor padding para el botón */
-    background-color: #28a745; /* Color verde para el botón */
-    color: white;
+    padding: 10px;
+    margin-top: 10px;
     border: none;
     border-radius: 4px;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Agregar transformación */
+    background-color: #4CAF50; /* Color verde para el botón */
+    color: white;
 }
 
-.reclamar-button:disabled {
-    background-color: #6c757d; /* Color gris cuando está deshabilitado */
+.reclamar-button:hover {
+    background-color: #45a049; /* Color más oscuro al pasar el ratón */
 }
 
-.reclamar-button:hover:not(:disabled) {
-    background-color: #218838; /* Color más oscuro en hover */
-    transform: scale(1.02); /* Efecto de aumento en hover */
-}
-
+/* Estilos para mensajes de éxito o error */
 .mensaje-exito {
-    color: #28a745; /* Verde para mensajes de éxito */
-    text-align: center;
-    margin-top: 15px; /* Separar del formulario */
-    font-weight: bold; /* Negrita para destacar */
+    color: #4CAF50;
+    margin-top: 10px;
 }
 
 .mensaje-error {
-    color: #dc3545; /* Rojo para mensajes de error */
-    text-align: center;
-    margin-top: 15px; /* Separar del formulario */
-    font-weight: bold; /* Negrita para destacar */
-}
-
-.loader {
-    text-align: center;
+    color: #f44336;
     margin-top: 10px;
-    font-size: 20px;
 }
 
+/* Estilos para el historial de reclamos */
 .historial-container {
-    margin-top: 20px; /* Separar del formulario */
-    padding: 10px;
-    border-radius: 8px;
-    background: #f0f0f0; /* Fondo claro para el historial */
+    margin-top: 20px;
+    text-align: left; /* Alineación a la izquierda para el historial */
 }
 
 .historial-container h3 {
-    text-align: center;
-    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
 }
 
 .historial-container ul {
-    list-style-type: none; /* Eliminar los puntos de la lista */
-    padding: 0; /* Eliminar el padding */
+    list-style-type: none; /* Sin viñetas para la lista */
+    padding: 0; /* Sin padding */
 }
 
 .historial-container li {
-    padding: 8px;
-    border-bottom: 1px solid #ccc; /* Línea entre los ítems */
-    color: #555; /* Color de texto más suave */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo ligero para cada reclamo */
+    padding: 10px;
+    margin: 5px 0; /* Margen entre los reclamos */
+    border-radius: 4px; /* Bordes redondeados */
+    color: #fff; /* Color de texto */
 }
 
-.historial-container li:last-child {
-    border-bottom: none; /* Eliminar la línea del último ítem */
+/* Estilos para el loader */
+.loader {
+    font-size: 18px;
+    margin: 20px 0;
 }
+
