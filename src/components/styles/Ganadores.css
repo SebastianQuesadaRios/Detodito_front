@@ -1,32 +1,66 @@
-/* src/components/Ganadores.css */
-
 .ganadores-container {
+    max-width: 800px; /* Aumenta el ancho máximo para acomodar la tabla */
+    margin: 20px auto; /* Espacio superior para separar de otros elementos */
     padding: 20px;
-    background-color: #f9f9f9;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente oscuro */
+    color: white;
+    text-align: center; /* Centrado del texto */
+}
+
+.ganadores-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.loader {
+    font-size: 18px;
+    margin: 20px 0;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 20px;
 }
 
-th, td {
+table th,
+table td {
     padding: 10px;
-    text-align: left;
-    border: 1px solid #ddd;
+    border: 1px solid #f0a500; /* Bordes en el color de acento */
+    text-align: left; /* Alineación a la izquierda de las celdas */
 }
 
-th {
-    background-color: #f2f2f2;
+table th {
+    background-color: rgba(255, 165, 0, 0.1); /* Fondo ligero para encabezados */
+    color: #f0a500; /* Color del texto del encabezado */
 }
 
-.loader {
-    text-align: center;
-    font-size: 24px;
+table td {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo suave para las celdas */
+    color: #fff; /* Color del texto */
+}
+
+.regresar-button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #2196F3;
+    color: white;
+}
+
+.regresar-button:hover {
+    background-color: #1976d2;
 }
 
 .mensaje-error {
-    color: red;
-    text-align: center;
+    color: #f44336;
+    margin-top: 10px;
 }
