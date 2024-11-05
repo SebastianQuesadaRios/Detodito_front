@@ -23,9 +23,7 @@ function App() {
                 <Route path='/admin' element={<LoginAdmin callback={handleLogin} />} />
                 <Route path='/ganadores' element={userId ? <Ganadores /> : <Navigate to="/admin" replace />} />
                 <Route path='/newadmin' element={<NewAdmin />} />
-                <Route 
-          path='/reclamar-codigo' 
-          element={userId ? <ReclamarCodigo userId={userId} /> : <Navigate to="/" replace />} 
+                <Route path='/reclamar-codigo' element={userId ? <ReclamarCodigo userId={userId} /> : <Navigate to="/" replace />}
         />
         
                 {/* Otras rutas según sea necesario */}

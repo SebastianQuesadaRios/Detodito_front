@@ -52,7 +52,7 @@ const ReclamarCodigo = ({ userId }) => {
 
     const obtenerHistorial = async (userId) => {
         try {
-            const response = await fetch(`https://back-margarita.vercel.app/v1/margarita/historial/${userId}`, {
+            const response = await fetch(`https://detodito-back.vercel.app/v1/margarita/historial/${userId}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
