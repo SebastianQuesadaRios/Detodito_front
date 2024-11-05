@@ -41,16 +41,16 @@ const NewAdmin = () => {
 
     return (
         <div className="new-admin-container">
-            <h2 className="new-admin-title">Registrar Nuevo Administrador</h2>
+            <h2 className="new-admin-title">Crear Nuevo Administrador</h2>
             <form onSubmit={handleRegister}>
                 <div className="form-group">
-                    <label htmlFor="username">Nombre de Usuario</label>
+                    <label htmlFor="username">Email</label>
                     <input
                         type="text"
                         id="username"
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
-                        placeholder="Ingresa el nombre de usuario"
+                        placeholder="Ingresa el Email"
                         required
                     />
                 </div>
