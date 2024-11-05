@@ -55,14 +55,14 @@ function Forms({ callback }) {
             {success && <div className="success-message">{success}</div>}
             <div className="form-group">
                 <label htmlFor="username">
-                    <span className="icon">🙍‍♂️</span> Usuario
+                    <span className="icon">🙍‍♂️</span> Email
                 </label>
                 <input
                     type="text"
                     id="username"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
-                    placeholder="Ingresa tu usuario"
+                    placeholder="Ingresa tu Email"
                     required
                 />
             </div>
