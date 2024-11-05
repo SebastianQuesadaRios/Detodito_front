@@ -14,7 +14,7 @@ const NewAdmin = () => {
         const datos = { username, password };
 
         try {
-            const response = await fetch('detodito-back.vercel.app/v1/margarita/registeradmin', {
+            const response = await fetch('https://detodito-back.vercel.app/v1/margarita/registeradmin', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
