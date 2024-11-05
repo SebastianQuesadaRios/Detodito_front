@@ -38,7 +38,7 @@ const Ganadores = () => {
 
     return (
         <div className="ganadores-container">
-            <h2>🏆 Ganadores de Premios 🏆</h2>
+            <h2>Ganadores</h2>
             {cargando ? (
                 <div className="loader">🔄 Cargando...</div>
             ) : (
@@ -47,7 +47,7 @@ const Ganadores = () => {
                     <table>
                         <thead>
                             <tr>
-                                <th>ID de Usuario</th>
+                                <th>Usuario</th>
                                 <th>Código</th>
                                 <th>Monto</th>
                                 <th>Fecha y Hora</th>
