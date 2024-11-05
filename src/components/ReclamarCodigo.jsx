@@ -81,7 +81,7 @@ const ReclamarCodigo = ({ userId }) => {
 
     return (
         <div className="reclamar-container">
-            <h2 className="reclamar-title">🎉 Reclama tu Código 🎉</h2>
+            <h2 className="reclamar-title">Canjea tu codigo</h2>
             <form onSubmit={handleReclamar}>
                 <div className="form-group">
                     <label htmlFor="codigo">Código</label>
@@ -107,7 +107,7 @@ const ReclamarCodigo = ({ userId }) => {
 
             {/* Sección para mostrar el historial de reclamos */}
             <div className="historial-container">
-                <h3>Historial de Reclamos</h3>
+                <h3>Codigos canjeados</h3>
                 {historial.length === 0 ? (
                     <p>No hay reclamos registrados.</p>
                 ) : (
