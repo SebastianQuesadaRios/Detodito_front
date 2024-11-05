@@ -14,6 +14,8 @@
     text-align: center;
     color: #333;
     margin: auto; /* Centra horizontalmente en caso de que haya espacio extra */
+
+    
   }
   
   /* Resto de estilos para el formulario, títulos, y botones */
@@ -206,6 +208,11 @@
 html, body {
     height: 100%; /* Asegúrate de que el html y body ocupen toda la altura */
     margin: 0; /* Elimina márgenes por defecto */
+    
+    background-image: url('/imagen.png'); /* Ajusta la ruta a tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   
   .login-container {
