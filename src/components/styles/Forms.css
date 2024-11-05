@@ -4,7 +4,7 @@
 /* Fuente general y colores */
 body {
     font-family: 'Poppins', sans-serif;
-    background: url('/imagen.png');
+    background: url('/imagen.png') no-repeat center center fixed;
     background-size: cover;
     color: #FFFFFF;
 }
