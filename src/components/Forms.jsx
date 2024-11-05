@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom'; // Cambia useHistory por useNavigate
+import { useNavigate } from 'react-router-dom';
 import './styles/Forms.css';
 
 function Forms({ callback }) {
@@ -14,7 +14,7 @@ function Forms({ callback }) {
         setSuccess('');
 
         const loginData = {
-            email: username, // Asegúrate de que el "username" se use como correo
+            email: username,
             password,
         };
 
@@ -31,11 +31,11 @@ function Forms({ callback }) {
 
             if (response.ok) {
                 setSuccess(result.status);
-                callback(result.userId, result.role); // Asegúrate de que el backend devuelva el userId y el role
+                callback(result.userId, result.role);
                 console.log('Login exitoso:', { username, password });
-                navigate('/reclamar-codigo'); // Navega a la ruta deseada después del login
+                navigate('/reclamar-codigo');
             } else {
-                setError(result.message); // Cambiado para usar message del resultado
+                setError(result.message);
             }
         } catch (error) {
             console.error('Error al realizar la solicitud:', error);
@@ -43,15 +43,19 @@ function Forms({ callback }) {
         }
     };
 
+    const handleRegister = () => {
+        navigate('/registro'); // Navega a la ruta de registro
+    };
+
     return (
         <div className="login-container">
-            <h2 className="login-title">¡Participa en el Sorteo de Margarita!</h2>
-            <p className="login-subtitle">Inicia sesión para una oportunidad de ganar</p>
+            <h2 className="login-title">¡Detodito te premia por comer!</h2>
+            <p className="login-subtitle">Inicia sesión para registrar un codigo</p>
             {error && <div className="error-message">{error}</div>}
             {success && <div className="success-message">{success}</div>}
             <div className="form-group">
                 <label htmlFor="username">
-                    <span className="icon">👤</span> Usuario
+                    <span className="icon">🙍‍♂️</span> Usuario
                 </label>
                 <input
                     type="text"
@@ -59,7 +63,7 @@ function Forms({ callback }) {
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                     placeholder="Ingresa tu usuario"
-                    required // Agrega required para mejor validación
+                    required
                 />
             </div>
             <div className="form-group">
@@ -72,13 +76,14 @@ function Forms({ callback }) {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="Ingresa tu contraseña"
-                    required // Agrega required para mejor validación
+                    required
                 />
             </div>
             <button className="login-button" onClick={handleLogin}>Entrar</button>
-            <Link to="/registro" className="register-button">Registrarse</Link>
+            <button className="login-button" onClick={handleRegister}>Registrarse</button> {/* Botón de registro */}
         </div>
     );
 }
 
 export default Forms;
+
